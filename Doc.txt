@@ -1,0 +1,6 @@
+!i/o- beta 0.1 *input, write added
+!gui\libs- beta 0.1 *basic hierachy for gui @this is using pythn
+!parse- beta 0.2 *division subtraction added | beta 0.1 *multiplication addition created @Coded using PEG.js
+
+@Majority of rC (RusczykCode) coded in js.
+@See readme for copyright info.
