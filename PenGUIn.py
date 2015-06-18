@@ -14,14 +14,26 @@ class Misc (root):
 
 class Guin (Misc):
   def __init__():
-    guin = Tk()
-    return guin
+    self.guin = Tk()
+    return self.guin
   
   def __str__():
     return "Guin window"
   
   def title(new_title):
-    guin.title(new_title)
+    self.guin.title(new_title)
+
+class Tux (Guin):
+  def __init__(height, width, master):
+    self.tux = Canvas(height=height, width=width, master=master)
+    self.master = master
+    return self.tux
+  
+  def getNewTux(height, width, master):
+    return Canvas(height=height, width=width, master=master)
+  
+  
+    
     
     
   
