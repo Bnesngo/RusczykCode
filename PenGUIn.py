@@ -31,6 +31,29 @@ class Tux (Guin):
   
   def getNewTux(height, width, master):
     return Canvas(height=height, width=width, master=master)
+    
+  def ab_rect(height, width, x=0, y=0, fill=None, line="black", mastercanvas=self):
+    pass
+  
+  def rect(height, width, x=0, y=0, fill=None, line="black"):
+    pass
+  
+  def ab_ellipse(height, width, x=0, y=0, fill=None, line="black", mastercanvas=self):
+    pass
+  
+  def ellipse(height, width, x=0, y=0, fill=None, line="black"):
+    pass
+  
+  def ab_arc(height, width, deg, line="black", mastercanvas=self):
+    pass
+  
+  def arc(height, width, deg, line="black"):
+    pass
+  
+  def fill_canvas(color="white"):
+    pass
+  
+  
   
   
     
