@@ -4,7 +4,7 @@ var write = new Function(string){
 
 //Then just have the parser define print();
 
-var number_in= new Function(type){
+var input= new Function(type){
   var x=raw_input();
   if (type===int){
     x=int(x)
@@ -22,3 +22,6 @@ var number_in= new Function(type){
 return x;
 }
 
+var open = new Function(path, opt){
+  //Code for file open here
+}
