@@ -18,4 +18,7 @@ mod = function(x, y) {
   return x % y;
 }
 
+pow = function(x, y) {
+  return x ** y
+}
 //Basic Operators
