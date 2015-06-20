@@ -35,19 +35,19 @@ parse = (function() {
         peg$c0 = peg$FAILED,
         peg$c1 = "+",
         peg$c2 = { type: "literal", value: "+", description: "\"+\"" },
-        peg$c3 = function(left, right) { return left + right; },
+        peg$c3 = function(left, right) { return "add(" + left + "," + right + ")"; },
         peg$c4 = "-",
         peg$c5 = { type: "literal", value: "-", description: "\"-\"" },
-        peg$c6 = function(left, right) { return left - right; },
+        peg$c6 = function(left, right) { return "subtract(" + left + "," + right + ")"; },
         peg$c7 = "*",
         peg$c8 = { type: "literal", value: "*", description: "\"*\"" },
-        peg$c9 = function(left, right) { return left * right; },
+        peg$c9 = function(left, right) { return "multiply(" + left + "," + right + ")"; },
         peg$c10 = "/",
         peg$c11 = { type: "literal", value: "/", description: "\"/\"" },
-        peg$c12 = function(left, right) { if (right !== 0) {return left / right;} else {return undefined;} },
+        peg$c12 = function(left, right) { if (right !== 0) {return "divide(" + left + "," + right + ")";} else {return undefined;} },
         peg$c13 = "%",
         peg$c14 = { type: "literal", value: "%", description: "\"%\"" },
-        peg$c15 = function(left, right) { if (right !== 0) {return left % right;} else {return undefined;} },
+        peg$c15 = function(left, right) { if (right !== 0) {return "mod(" + left + "," + right + ")";} else {return undefined;} },
         peg$c16 = "(",
         peg$c17 = { type: "literal", value: "(", description: "\"(\"" },
         peg$c18 = ")",
@@ -177,17 +177,30 @@ parse = (function() {
           function hex(ch) { return ch.charCodeAt(0).toString(16).toUpperCase(); }
 
           return s
-            .replace(/\\/g,   '\\\\')
-            .replace(/"/g,    '\\"')
-            .replace(/\x08/g, '\\b')
-            .replace(/\t/g,   '\\t')
-            .replace(/\n/g,   '\\n')
-            .replace(/\f/g,   '\\f')
-            .replace(/\r/g,   '\\r')
-            .replace(/[\x00-\x07\x0B\x0E\x0F]/g, function(ch) { return '\\x0' + hex(ch); })
-            .replace(/[\x10-\x1F\x80-\xFF]/g,    function(ch) { return '\\x'  + hex(ch); })
-            .replace(/[\u0180-\u0FFF]/g,         function(ch) { return '\\u0' + hex(ch); })
-            .replace(/[\u1080-\uFFFF]/g,         function(ch) { return '\\u'  + hex(ch); });
+            .replace(/
+/g,   '
+
+')
+            .replace(/"/g,    '
+"')
+            .replace(/\x08/g, '
+b')
+            .replace(/\t/g,   '
+t')
+            .replace(/\n/g,   '
+n')
+            .replace(/\f/g,   '
+f')
+            .replace(/\r/g,   '
+r')
+            .replace(/[\x00-\x07\x0B\x0E\x0F]/g, function(ch) { return '
+x0' + hex(ch); })
+            .replace(/[\x10-\x1F\x80-\xFF]/g,    function(ch) { return '
+x'  + hex(ch); })
+            .replace(/[\u0180-\u0FFF]/g,         function(ch) { return '
+u0' + hex(ch); })
+            .replace(/[\u1080-\uFFFF]/g,         function(ch) { return '
+u'  + hex(ch); });
         }
 
         var expectedDescs = new Array(expected.length),
@@ -502,6 +515,3 @@ parse = (function() {
     parse:       parse
   };
 })();
-
-  
-/* There will be more soon! */
