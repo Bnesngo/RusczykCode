@@ -510,6 +510,9 @@ u'  + hex(ch); });
     }
   }
 
+  
+  
+  
   return {
     SyntaxError: SyntaxError,
     parse:       parse
