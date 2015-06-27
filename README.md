@@ -1,6 +1,6 @@
 # RusczykCode
 The repository for RusczykCode (rC)
-Created by phi_ftw1618, bananas97, S7 (Me), thepiercingarrow, and TurtlePie
+Created by phi_ftw1618, bananas97, S7 (Me), thepiercingarrow, and TurtlePie, abk2015
 All rights reserved, (c). 2015-2016, THIS REPOSITORY DOES NOT TOLERATE PIRACY 
 
 # Using open source for RusczykCode
