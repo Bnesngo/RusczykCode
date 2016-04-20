@@ -17,7 +17,7 @@ class Queue(baseDS):
         count = count + 1
     def removeFromFront(self):
         data.remove(data[0])
-        count = count + 1
+        count = count - 1
 
 class Bag(baseDS):
     def add(self, item):
@@ -30,3 +30,18 @@ class Stack(baseDS):
         count = count + 1
     def removeFromTop(self):
         data.remove(data[count-1])
+        count = count - 1;
+
+class DoubleEndedQueue(baseDS):
+    def addToBack(self, item):
+        data.append(item)
+        count = count + 1
+    def removeFromFront(self):
+        data.remove(data[0])
+        count = count - 1
+    def removeFromBack(self):
+        data.pop()
+        count = count - 1
+    def addToFront(self, item)
+        data.insert(0, item)
+        count = count + 1
